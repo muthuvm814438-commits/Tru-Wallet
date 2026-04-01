@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style></style>
+</head>
+
+<body class="body header-fixed home-3 is_light" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="0">
+
+
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="xcH76QxWwB7Het20WUvwIkq0eUTqaSjINqXhn99C">
+    <title>Login - Truwallet</title>
+
+    <link rel="stylesheet" href="https://tru-wallet.net/css/ply-app.css">
+    <link rel="stylesheet" href="https://tru-wallet.net/css/magnific-popup.css">
+    <link rel="stylesheet" href="https://tru-wallet.net/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cryptocoins-icons@2.9.0/webfont/cryptocoins.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cryptocoins-icons@2.9.0/webfont/cryptocoins-colors.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link rel="shortcut icon" href="https://tru-wallet.net/images/logo/truwallet-logo.png">
+    <link rel="apple-touch-icon-precomposed" href="https://tru-wallet.net/images/logo/truwallet-logo.png">
+    <style>
+        li.active>a.sidebar-nav-a {
+            display: block;
+            color: #eee;
+            padding-bottom: 7px;
+        }
+
+        li.active>a.sidebar-nav-a:hover {
+            color: #fff;
+        }
+    </style>
+
+
+
+
+    <header id="header_main" class="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header__body d-flex justify-content-between">
+                        <div class="header__left">
+                            <div class="logo">
+                                <a class="light" href="home.html">
+                                    <img id="site-logo"
+                                        src="https://tru-wallet.net/images/logo/truewallet-logo-black.png" alt=""
+                                        width="118" height="32"
+                                        data-retina="https://tru-wallet.net/images/logo/truewallet-logo-black.png"
+                                        data-width="118" data-height="32">
+                                </a>
+                            </div>
+                            <div class="left__main">
+
+                            </div>
+                        </div>
+
+                        <div class="header__right">
+                            <div class="mobile-button">
+                                <span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav id="main-nav-mobi" class="main-nav" style="display: none;">
+            <ul id="menu-primary-menu" class="menu">
+                <li class="menu-item ">
+                    <a href="home.html">Home</a>
+                </li>
+                <li class="menu-item ">
+                    <a href="about.html">About</a>
+                </li>
+                <li class="menu-item ">
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li class="menu-item ">
+                    <a href="p2p.html">P2P</a>
+                </li>
+                <li class="menu-item ">
+                    <a href="invesment.html">Investment</a>
+                </li>
+                <li class="menu-item current-menu-item">
+                    <a href="index.html">Login</a>
+                </li>
+                <li class="menu-item ">
+                    <a href="register.html">Register</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div style="height: 49.9855px; display: none;"></div>
+
+    <!-- PageTitle -->
+    <section class="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="heading">Login</h3>
+                </div>
+                <div class="col-md-6">
+                    <ul class="breadcrumb">
+                        <li><a href="home.html">Home</a></li>
+                        <li>
+                            <p class="fs-18">/</p>
+                        </li>
+                        <li>
+                            <p class="fs-18">Login</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End PageTitle -->
+
+    <section class="register login" style="background-image: url('../images/background/crypto-background.png');
+        background-repeat: space; background-size: cover;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="block-text center">
+                        <h3 class="heading">Login to Truwallet</h3>
+                        <p class="desc fs-20">
+                            Welcome back! Log In to continue
+                        </p>
+                        <div class="lock">
+                            <div class="icon">
+                                <svg width="16" height="20" viewBox="0 0 16 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8.00004 11.7578C7.67672 11.7578 7.41406 12.0205 7.41406 12.3438C7.41406 12.6671 7.67672 12.9298 8.00004 12.9298C8.32336 12.9298 8.58602 12.6671 8.58602 12.3438C8.58602 12.0205 8.32336 11.7578 8.00004 11.7578Z"
+                                        fill="white"></path>
+                                    <path
+                                        d="M11.5162 8.24219H4.2187C2.10011 8.24219 0.382568 9.95965 0.382568 12.0783C0.382568 15.6973 2.78413 19.0605 6.32241 19.8205C11.2508 20.8791 15.618 17.0922 15.618 12.344C15.618 10.0787 13.7816 8.24219 11.5162 8.24219ZM8.58628 13.9941V17.071C8.58628 17.3949 8.32417 17.657 8.0003 17.657C7.6764 17.657 7.41433 17.3949 7.41433 17.071V13.9941C6.73374 13.7514 6.24237 13.107 6.24237 12.3441C6.24237 11.3747 7.03093 10.5861 8.0003 10.5861C8.96968 10.5861 9.75823 11.3747 9.75823 12.3441C9.75823 13.107 9.26686 13.7513 8.58628 13.9941Z"
+                                        fill="white"></path>
+                                    <path
+                                        d="M8.00039 0C5.08223 0 2.72656 2.35562 2.72656 5.27383V7.3234C3.20102 7.17391 3.69582 7.07086 4.21898 7.07086H5.07051V5.27383C5.07051 3.65652 6.38309 2.34395 8.00039 2.34395C9.6177 2.34395 10.9303 3.65652 10.9303 5.27383V7.07082H11.5163C12.1356 7.07082 12.7216 7.19777 13.2742 7.3948V5.27383C13.2742 2.35844 10.9128 0 8.00039 0Z"
+                                        fill="white"></path>
+                                </svg>
+                            </div>
+                            <p><span>https://tru-wallet.net/</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="flat-tabs">
+
+                        <div class="content-tab">
+                            <div class="content-inner" style="">
+                                <form id="login-form" method="POST" action="#">
+                                    <input type="hidden" name="_token" value="xcH76QxWwB7Het20WUvwIkq0eUTqaSjINqXhn99C">
+                                    <div class="form-group">
+                                        <label for="email">Email Address</label>
+                                        <input type="email" name="email" class="form-control" id="email"
+                                            placeholder="Enter your email" value="" required="" autocomplete="email"
+                                            autofocus="">
+                                    </div>
+
+                                    <div class="form-group s1">
+                                        <label for="password">Password</label>
+                                        <input type="password" class="form-control" placeholder="Enter your password"
+                                            name="password" id="password" required="" autocomplete="current-password">
+                                    </div>
+
+                                    <div class="form-group form-check">
+                                        <div>
+                                            <input type="checkbox" class="form-check-input" name="remember"
+                                                id="remember">
+                                            <label for="remember" class="form-check-label">Remember Me</label>
+                                        </div>
+                                        <a class="" href="javascript:void(0)" id="openForgotPasswordModal"
+                                            data-toggle="modal" data-target="#forgotPasswordModal">
+                                            Forgot Your Password?
+                                        </a>
+                                    </div>
+
+                                    <button type="submit" class="btn-action">Login</button>
+                                    <div class="bottom">
+                                        <p>Don't have an account?</p>
+                                        <a href="register.html">Register</a>
+                                    </div>
+                                </form>
+
+                                <!-- Professional App Download Section -->
+                                <div class="app-download-section mt-5 p-4 text-center"
+                                    style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px;">
+                                    <h6 class="text-white mb-2">Tru-Wallet for Android</h6>
+                                    <p class="small text-muted mb-3">Experience secure crypto management on the go.
+                                        Fast, secure, and intuitive.</p>
+
+                                    <a href="TruWallet_1_1.0.apk" id="android-download-link" download
+                                        class="btn-download d-inline-flex align-items-center justify-content-center"
+                                        style="background: linear-gradient(135deg, #2463f1 0%, #6837f1 100%); color: white; padding: 12px 24px; border-radius: 12px; font-weight: 600; text-decoration: none; transition: all 0.3s ease; box-shadow: 0 10px 20px rgba(36, 99, 241, 0.2);">
+                                        <i class="fab fa-android mr-2" style="font-size: 20px;"></i>
+                                        Download APK
+                                    </a>
+                                    <p class="mt-2" style="font-size: 11px; color: rgba(255,255,255,0.4);">Version 1.1.0
+                                        • 2.70 MB</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer style-2">
+        <div class="container">
+            <div class="footer__main">
+                <div class="row mb-3">
+                    <div class="col-xl-4 col-md-6">
+                        <div class="info">
+                            <a href="home.html" class="logo">
+                                <img style="width: 150px;"
+                                    src="https://tru-wallet.net/images/logo/truewallet-logo-black.png" alt="">
+                            </a>
+                            <h6>Let's talk! 🤙</h6>
+                            <ul class="list">
+                                <li>
+                                    <p>+44 7900 405151 (whatsapp)</p>
+                                </li>
+                                <li>
+                                    <p>@TRU_WALLET (instagram)</p>
+                                </li>
+                                <li>
+                                    <p>26 Federal Building 7th Floor, Suite 9-110, 10278</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-6">
+                        <div class="widget">
+                            <div class="widget-link">
+                                <h6 class="title">PRODUCTS</h6>
+                                <ul>
+                                    <li><a href="home.html">Home</a></li>
+                                    <li><a href="about.html">About</a></li>
+                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="p2p.html">P2P</a></li>
+                                    <li><a href="invesment.html">Investment</a></li>
+                                </ul>
+                            </div>
+                            <div class="widget-link s2">
+                                <h6 class="title">SERVICES</h6>
+                                <ul>
+                                    <li><a href="dashboard.html">Buy Crypto</a></li>
+                                    <li><a href="referrals.html">Referrals</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-12">
+                        <div class="footer-contact">
+                            <h5>Newletters</h5>
+                            <p>
+                                Subscribe our newsletter to get more exciting offers and latest crypto news.
+                            </p>
+                            <form id="form-newsletter">
+                                <input type="email" placeholder="Enter your email" required="">
+                                <button type="submit" class="btn-action" id="btn-newsletter">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="footer__bottom">
+                <p>Copyright © 2026 Truwallet. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://tru-wallet.net/js/aos.js"></script>
+    <script src="https://tru-wallet.net/js/jquery.min.js"></script>
+    <script src="https://tru-wallet.net/js/jquery.easing.js"></script>
+    <script src="https://tru-wallet.net/js/popper.min.js"></script>
+    <script src="https://tru-wallet.net/js/bootstrap.min.js"></script>
+    <script src="https://tru-wallet.net/js/ply-app.js"></script>
+    <script src="https://tru-wallet.net/js/jquery.peity.min.js"></script>
+
+
+    <script src="https://tru-wallet.net/js/switchmode.js"></script>
+    <script src="https://tru-wallet.net/js/jquery.magnific-popup.min.js"></script>
+
+
+
+    <!-- Swiper JS -->
+    <script src="https://tru-wallet.net/js/swiper-bundle.min.js"></script>
+
+    <script src="https://tru-wallet.net/js/swiper.js"></script>
+
+
+    <script>
+        $(() => {
+            'use strict'
+
+            $('#form-newsletter').submit(function (e) {
+                e.preventDefault()
+
+                const btn = $('#btn-newsletter')
+                btn.html('Submitting...').attr('disabled', true)
+
+                window.setTimeout(() => {
+                    alert('You have successfully subscribe to our newletter. Lookout for our emails on exciting offers and latest crypto news.')
+
+                    btn.html('Submit').attr('disabled', false)
+                    $('#form-newsletter')[0].reset()
+                }, 3500);
+            })
+        })
+    </script>
+
+
+
+    <script src="insforge-config.js"></script>
+    <script type="module">
+        import { createClient } from "https://cdn.jsdelivr.net/npm/@insforge/sdk@latest/+esm";
+        window.insforgeClient = createClient({ baseUrl: window.INSFORGE_URL, anonKey: window.INSFORGE_ANON_KEY });
+    </script>
+
+    <!-- Forgot Password Modal -->
+    <div class="modal fade" id="forgotPasswordModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content"
+                style="background: #11151c; border: 1px solid rgba(255,255,255,0.1); border-radius: 20px;">
+                <div class="modal-header" style="border-bottom: 1px solid rgba(255,255,255,0.1); padding: 25px;">
+                    <h5 class="modal-title text-white">Reset Password</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close"
+                        style="background: none; border: none; font-size: 24px;">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" style="padding: 25px;">
+                    <p class="text-white-50 mb-4" style="color: rgba(255,255,255,0.7) !important;">Enter your email
+                        address and we'll send you an OTP to reset your password.</p>
+                    <form id="forgot-password-form">
+                        <div class="form-group mb-4">
+                            <label class="text-white mb-2">Email Address</label>
+                            <input type="email" id="reset-email" class="form-control" placeholder="Enter your email"
+                                required
+                                style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
+                        </div>
+                        <button type="submit" class="btn-action w-100" style="width: 100%;">Send Reset Link</button>
+                        <div id="reset-status" class="mt-3 text-center"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(() => {
+            $('#forgot-password-form').submit(async function (e) {
+                e.preventDefault();
+                const email = $('#reset-email').val();
+                const btn = $(this).find('button');
+                const statusBox = $('#reset-status');
+
+                btn.attr('disabled', true).html('Sending <i class="fa fa-circle-notch fa-spin"></i>');
+                statusBox.html('');
+
+                try {
+                    if (!window.insforgeClient) throw new Error("Client not ready");
+                    const { data, error } = await window.insforgeClient.auth.sendResetPasswordEmail({ email });
+
+                    if (error) throw error;
+
+                    statusBox.html('<p class="text-success">OTP sent! Redirecting...</p>');
+                    setTimeout(() => {
+                        window.location.href = `reset-password.html?email=${encodeURIComponent(email)}`;
+                    }, 2000);
+                } catch (err) {
+                    statusBox.html(`<p class="text-danger">Error: ${err.message}</p>`);
+                    btn.attr('disabled', false).html('Send Reset Link');
+                }
+            });
+            $('#login-form').submit(async function (e) {
+                e.preventDefault();
+                const email = $('#email').val();
+                const password = $('#password').val();
+                const btn = $(this).find('button[type="submit"]');
+
+                btn.attr('disabled', true).html('Logging in <i class="fa fa-circle-notch fa-spin"></i>');
+
+                try {
+                    if (!window.insforgeClient) throw new Error("InsForge Client not initialized. Please configure insforge-config.js");
+
+                    const { data, error } = await window.insforgeClient.auth.signInWithPassword({
+                        email: email,
+                        password: password
+                    });
+
+                    if (error) throw error;
+
+                    // Success
+                    window.location.href = 'dashboard.html';
+                } catch (err) {
+                    alert('Login failed: ' + err.message);
+                    btn.attr('disabled', false).html('Login');
+                }
+            });
+        });
+    </script>
+
+
+</body>

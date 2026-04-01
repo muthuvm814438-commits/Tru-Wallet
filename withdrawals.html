@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html>
+<head>
+                <style></style>
+            </head>
+            <body class="body header-fixed home-3 is_light" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="0">
+                
+
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="nSoZIUdmG9H6JGT2YC7wEKqjhaKZRw3GzC62balM">
+    <title>Withdrawals - Truwallet</title>
+
+    <link rel="stylesheet" href="https://tru-wallet.net/css/ply-app.css">
+    <link rel="stylesheet" href="https://tru-wallet.net/css/magnific-popup.css">
+    <link rel="stylesheet" href="https://tru-wallet.net/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cryptocoins-icons@2.9.0/webfont/cryptocoins.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cryptocoins-icons@2.9.0/webfont/cryptocoins-colors.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+    <style>
+        table.dataTable.no-footer {
+            border-bottom: 0px !important;
+        }
+        table.dataTable thead th, table.dataTable thead td {
+            padding: 10px 12px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            font-weight: 600;
+            color: #555;
+        }
+        table.dataTable tbody tr:hover {
+            background-color: rgba(0,0,0,0.03);
+        }
+        div.dataTables_wrapper div.dataTables_length label,
+        div.dataTables_wrapper div.dataTables_filter label {
+            font-size: 14px;
+            color: #666;
+        }
+        div.dataTables_wrapper div.dataTables_info {
+            font-size: 13px;
+            color: #888;
+        }
+        .badge-pending {
+            background-color: #f5a623;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 5px 12px;
+            border-radius: 50px;
+        }
+        .badge-rejected {
+            background-color: #e74c3c;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 5px 12px;
+            border-radius: 50px;
+        }
+        .badge-complete {
+            background-color: #2ecc71;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 5px 12px;
+            border-radius: 50px;
+        }
+    </style>
+
+    <link rel="shortcut icon" href="https://tru-wallet.net/images/logo/truwallet-logo.png">
+    <link rel="apple-touch-icon-precomposed" href="https://tru-wallet.net/images/logo/truwallet-logo.png">
+    <style>
+        li.active>a.sidebar-nav-a {
+            display: block;
+            color: #eee;
+            padding-bottom: 7px;
+        }
+
+        li.active>a.sidebar-nav-a:hover {
+            color: #fff;
+        }
+    </style>
+
+
+
+    
+    <header id="header_main" class="header is-fixed">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="header__body d-flex justify-content-between">
+                    <div class="header__left">
+                        <div class="logo">
+                            <a class="light" href="home.html">
+                                <img id="site-logo" src="https://tru-wallet.net/images/logo/truewallet-logo-black.png" alt="" width="118" height="32" data-retina="https://tru-wallet.net/images/logo/truewallet-logo-black.png" data-width="118" data-height="32">
+                            </a>
+                        </div>
+                        <div class="left__main">
+                            <nav id="main-nav" class="main-nav">
+                                <ul id="menu-primary-menu" class="menu">
+                                    <li class="menu-item ">
+                                        <a href="home.html">Home</a>
+                                    </li>
+                                    <li class="menu-item ">
+                                        <a href="about.html">About</a>
+                                    </li>
+                                    <li class="menu-item ">
+                                        <a href="contact.html">Contact</a>
+                                    </li>
+                                    <li class="menu-item ">
+                                        <a href="p2p.html">P2P</a>
+                                    </li>
+                                    <li class="menu-item ">
+                                        <a href="invesment.html">Investment</a>
+                                    </li>
+                                                                            <li class="menu-item ">
+                                            <a href="dashboard.html">Dashboard</a>
+                                        </li>
+                                                                                                        </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="header__right">
+                        <div class="mobile-button">
+                            <span></span>
+                        </div>
+                                                    <div class="dropdown user d-block">
+                                <button class="btn dropdown-toggle shadow-none" type="button" id="dropdownMenuButton4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img id="header-avatar" src="https://tru-wallet.net/images/avt/avt-01.jpg" class="rounded-circle" alt="">
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
+                                    <a class="dropdown-item" href="profile.html">
+                                        <i class="bx bx-user font-size-16 align-middle me-1"></i>
+                                        <span>Profile</span>
+                                    </a>
+                                    <a class="dropdown-item text-danger" href="index.html" onclick="if(window.insforgeClient) window.insforgeClient.auth.signOut()">
+                                        <i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i>
+                                        <span>Logout</span>
+                                    </a>
+                                </div>
+                            </div>
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header><div style="height: 49.9855px;"></div>
+
+        <!-- PageTitle -->
+    <section class="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="heading">Withdrawals</h3>
+                </div>
+                <div class="col-md-6">
+                    <ul class="breadcrumb">
+                        <li><a href="home.html">Home</a></li>
+                        <li>
+                            <p class="fs-18">/</p>
+                        </li>
+                        <li>
+                            <p class="fs-18">Withdrawals</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End PageTitle -->
+
+    <section class="user-profile wallet buy-crypto flat-tabs">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xl-3 col-md-12">
+    <div class="user-info center">
+        <div class="avt">
+            <img id="sidebar-avatar" src="https://tru-wallet.net/images/avt/avt.png" alt="no file">
+        </div>
+        <h6 id="sidebar-name" class="name text-capitalize">Loading...</h6>
+        <p id="sidebar-email">Loading...</p>
+        
+    </div>
+
+    <ul class="menu-tab">
+        <li class="" onclick="location.href = 'dashboard.html'">
+            <a href="dashboard.html" class="fs-16 sidebar-nav-a">
+                <i class="fa fa-gauge-high"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="" onclick="location.href = 'deposit.html'">
+            <a href="deposit.html" class="fs-16 sidebar-nav-a">
+                <i class="fa fa-money-bill-transfer"></i>
+                Deposit
+            </a>
+        </li>
+        <li class="" onclick="location.href = 'orders.html'">
+            <a href="orders.html" class="fs-16 sidebar-nav-a">
+                <i class="fa fa-money-bill-transfer"></i>
+                P2P&nbsp;Deposit&nbsp;Orders
+            </a>
+        </li>
+        <li class="" onclick="location.href = 'packages.html'">
+            <a href="packages.html" class="fs-16 sidebar-nav-a">
+                <i class="fa fa-sack-dollar"></i>
+                Investments
+            </a>
+        </li>
+        <li class="active" onclick="location.href = 'withdrawals.html'">
+            <a href="withdrawals.html" class="fs-16 sidebar-nav-a">
+                <i class="fa fa-money-bill"></i>
+                Withdrawals
+            </a>
+        </li>
+        <li class="" onclick="location.href = 'external-wallets.html'">
+            <a href="external-wallets.html" class="fs-16 sidebar-nav-a">
+                <i class="fa fa-wallet"></i>
+                External Wallets
+            </a>
+        </li>
+        <li class="" onclick="location.href = 'loans.html'">
+            <a href="loans.html" class="fs-16 sidebar-nav-a">
+                <i class="fa fa-university"></i>
+                Request Loan
+            </a>
+        </li>
+        <li class="" onclick="location.href = 'referrals.html'">
+            <a href="referrals.html" class="fs-16 sidebar-nav-a">
+                <i class="fa fa-users-rays"></i>
+                Referrals
+            </a>
+        </li>
+        <li class="" onclick="location.href = 'profile.html'">
+            <a href="profile.html" class="fs-16 sidebar-nav-a">
+                <i class="fa fa-user"></i>
+                Profile&nbsp;&amp;&nbsp;Security
+            </a>
+        </li>
+        <li class="" onclick="location.href = 'index.html'">
+            <a href="index.html" class="fs-16 sidebar-nav-a">
+                <i class="fa fa-lock"></i>
+                Logout
+            </a>
+        </li>
+    </ul>
+</div>
+                <div class="col-xl-9 col-md-12">
+                    <div class="content-tab">
+                        <div class="content-inner" style="">
+
+                            <section class="coin-list p-0">
+                                <div class="container p-0">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="shadow-sm p-3 mb-5 bg-body rounded">
+
+                                                <div class="block-text">
+                                                    <h6 class="heading">Withdrawals</h6>
+                                                    <span class="btn btn-sm btn-primary text-white" id="open-withdrawal-modal">
+                                                        Withdraw
+                                                    </span>
+                                                </div>
+
+                                                <div class="table-responsive-sm mt-3">
+                                                    <table class="table table-borderless" id="withdrawals-history-table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th scope="col">Date</th>
+                                                                <th scope="col">Wallet</th>
+                                                                <th scope="col">Method</th>
+                                                                <th scope="col">Amount</th>
+                                                                <th scope="col">Address/Bank&nbsp;Details</th>
+                                                                <th scope="col">Status</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <!-- Dynamic rows inserted here -->
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="withdrawal-modal" tabindex="-1" role="dialog" aria-labelledby="withdrawal-modal-label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title text-dark" id="withdrawal-modal-label">Request Withdrawal</h6>
+                    <button type="button" class="close btn" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="text-danger" style="font-size: 26px;">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="#" id="withdrawal-form">
+                        <div class="form-group">
+                            <label for="withdrawal-coin" class="w-100">
+                                Wallet <span class="text-danger">*</span>
+                                <small class="float-end text-danger" style="font-size: 14px;" id="withdrawal-modal-label-amount-balance"></small>
+                            </label>
+                            <select class="form-control w-100 m-0" id="withdrawal-coin" required="">
+                                <option value="">Select</option>
+                                <option value="BTC" data-coin-abbr="BTC" data-coin-gecko="bitcoin" data-coin-name="Bitcoin" data-amountbalance="0">Bitcoin (BTC)</option>
+                                <option value="ETH" data-coin-abbr="ETH" data-coin-gecko="ethereum" data-coin-name="Ethereum" data-amountbalance="0">Ethereum (ETH)</option>
+                                <option value="USDT" data-coin-abbr="USDT" data-coin-gecko="tether" data-coin-name="Tether" data-amountbalance="0">Tether (USDT)</option>
+                                <option value="LTC" data-coin-abbr="LTC" data-coin-gecko="litecoin" data-coin-name="Litecoin" data-amountbalance="0">Litecoin (LTC)</option>
+                                <option value="DOGE" data-coin-abbr="DOGE" data-coin-gecko="dogecoin" data-coin-name="Dogecoin" data-amountbalance="0">Dogecoin (DOGE)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label for="withdrawal-amount" class="w-100">
+                                Amount <span class="text-danger">*</span>
+                                <small class="float-end text-muted" id="withdrawal-modal-label-amount-in-usd" style="font-size: 14px;"></small>
+                            </label>
+                            <input type="number" id="withdrawal-amount" data-amountbalance="" data-coin-abbr="" data-coin-gecko="" class="form-control w-100 mt-2" step="0.000000000000000001" required="" disabled="">
+                            <div class="d-flex justify-content-between mt-1">
+                                <small id="withdrawal-amount-status-text" class="text-danger"></small>
+                                <small class="text-muted">Min: $10.00 USD</small>
+                            </div>
+                        </div>
+
+                        <div class="form-group mt-3">
+                            <label for="withdrawal-method" class="w-100">
+                                Method <span class="text-danger">*</span>
+                            </label>
+                            <select class="form-control w-100 m-0" id="withdrawal-method" required="">
+                                <option value="">Select</option>
+                                <option value="Bank">To Bank</option>
+                                <option value="Wallet">To External Wallet</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group mt-3 d-none" id="withdrawal-address-div">
+                            <label for="withdrawal-address">
+                                Address <span class="text-danger">*</span>
+                            </label>
+                            <input type="text" id="withdrawal-address" class="form-control w-100 mt-2">
+                        </div>
+
+                        <div class="d-none" id="bank-details-div">
+                            <div class="form-group mt-3">
+                                <label for="account-number">
+                                    Account Number <span class="text-danger">*</span>
+                                </label>
+                                <input type="text" id="account-number" class="form-control w-100 mt-2">
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <label for="account-name">
+                                    Account Name <span class="text-danger">*</span>
+                                </label>
+                                <input type="text" id="account-name" class="form-control w-100 mt-2">
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <label for="bank-name">
+                                    Bank Name <span class="text-danger">*</span>
+                                </label>
+                                <input type="text" id="bank-name" class="form-control w-100 mt-2">
+                            </div>
+
+                            <div class="form-group mt-3">
+                                <label for="bank-code">
+                                    Bank Code
+                                </label>
+                                <input type="text" id="bank-code" class="form-control w-100 mt-2">
+                            </div>
+                        </div>
+
+                        <p class="text-center">
+                            <button type="submit" class="btn btn-primary text-white mt-3" id="btn-submit-withdrawal">
+                                Submit
+                            </button>
+                        </p>
+                    </form>
+                </div>
+                <div class="modal-footer border-0"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="withdrawal-success-modal" tabindex="-1" role="dialog" aria-labelledby="withdrawal-success-modal-label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h6 class="modal-title text-success" id="withdrawal-success-modal-label">Withdrawal Requested</h6>
+                    <button type="button" class="close btn" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="text-danger" style="font-size: 26px;">×</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center py-4">
+                    <div class="mb-3">
+                        <i class="fa fa-circle-check text-success" style="font-size: 60px;"></i>
+                    </div>
+                    <h5 class="mb-2">Success!</h5>
+                    <p class="text-muted">Your withdrawal request has been submitted successfully.</p>
+                    <div class="p-3 bg-light rounded mt-3 text-start">
+                        <p class="mb-1 small text-uppercase fw-bold text-muted">Current Status</p>
+                        <p class="mb-0 text-warning fw-bold"><i class="fa fa-clock"></i> PENDING</p>
+                        <hr class="my-2">
+                        <p class="mb-0 small text-muted italic">Your balance has been updated accordingly. Our team will process your request shortly.</p>
+                    </div>
+                    <button type="button" class="btn btn-primary w-100 mt-4" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="eth-gas-modal" tabindex="-1" role="dialog" aria-labelledby="eth-gas-modal-label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="padding: 0rem 1rem !important;">
+                    <h6 class="modal-title text-dark" id="withdrawal-modal-label">Withdrawal Unsuccessful</h6>
+                    <button type="button" class="close btn" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="text-danger" style="font-size: 26px;">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Insufficient Ethereum Gas plan to process this withdrawal. <a href="https://tru-wallet.net/packages" style="font-weight: unset !important; color: #0a58ca !important; text-decoration: underline !important;">Click here to activate an Ethereum Gas plan to enable withdrawal</a></p>
+                </div>
+                <div class="modal-footer border-0"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer style-2">
+    <div class="container">
+        <div class="footer__main">
+            <div class="row mb-3">
+                <div class="col-xl-4 col-md-6">
+                    <div class="info">
+                        <a href="home.html" class="logo">
+                            <img style="width: 150px;" src="https://tru-wallet.net/images/logo/truewallet-logo-black.png" alt="">
+                        </a>
+                        <h6>Let's talk! 🤙</h6>
+                        <ul class="list">
+                            <li><p>+44 7900 405151 (whatsapp)</p></li>
+                            <li><p>@TRU_WALLET (instagram)</p></li>
+                            <li><p>26 Federal Building  7th Floor, Suite 9-110,  10278</p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6">
+                    <div class="widget">
+                        <div class="widget-link">
+                            <h6 class="title">PRODUCTS</h6>
+                            <ul>
+                                <li><a href="home.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="p2p.html">P2P</a></li>
+                                <li><a href="invesment.html">Investment</a></li>
+                            </ul>
+                        </div>
+                        <div class="widget-link s2">
+                            <h6 class="title">SERVICES</h6>
+                            <ul>
+                            <li><a href="dashboard.html">Buy Crypto</a></li>
+                            <li><a href="https://tru-wallet.net/referrals">Referrals</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-12">
+                    <div class="footer-contact">
+                        <h5>Newletters</h5>
+                        <p>
+                            Subscribe our newsletter to get more exciting offers and latest crypto news.
+                        </p>
+                        <form id="form-newsletter">
+                            <input type="email" placeholder="Enter your email" required="">
+                            <button type="submit" class="btn-action" id="btn-newsletter">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="footer__bottom">
+            <p>Copyright © 2026 Truwallet. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://tru-wallet.net/js/aos.js"></script>
+<script src="https://tru-wallet.net/js/jquery.min.js"></script>
+<script src="https://tru-wallet.net/js/jquery.easing.js"></script>
+<script src="https://tru-wallet.net/js/popper.min.js"></script>
+<script src="https://tru-wallet.net/js/bootstrap.min.js"></script>
+<script src="https://tru-wallet.net/js/ply-app.js"></script>
+<script src="https://tru-wallet.net/js/jquery.peity.min.js"></script>
+
+
+<script src="https://tru-wallet.net/js/switchmode.js"></script>
+<script src="https://tru-wallet.net/js/jquery.magnific-popup.min.js"></script>
+
+
+
+<!-- Swiper JS -->
+<script src="https://tru-wallet.net/js/swiper-bundle.min.js"></script>
+
+<script src="https://tru-wallet.net/js/swiper.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+
+    <script src="https://tru-wallet.net/js/custom.js"></script>
+<script src="insforge-config.js"></script>
+    <script type="module">
+        import { createClient } from "https://cdn.jsdelivr.net/npm/@insforge/sdk@latest/+esm";
+        window.insforgeClient = createClient({ baseUrl: window.INSFORGE_URL, anonKey: window.INSFORGE_ANON_KEY });
+    </script>
+    <script src="user-profile.js"></script>
+    <script type="text/javascript">
+        const getBadgeClass = (status) => {
+            const s = (status || '').toLowerCase();
+            if (s === 'pending') return 'badge-pending';
+            if (s === 'rejected' || s === 'failed') return 'badge-rejected';
+            return 'badge-complete';
+        };
+
+        function initDataTable(hasData) {
+            if ($.fn.DataTable.isDataTable('#withdrawals-history-table')) {
+                $('#withdrawals-history-table').DataTable().destroy();
+            }
+            if (!hasData) return; // Don't init DataTables on empty/colspan rows
+            $('#withdrawals-history-table').DataTable({
+                order: [],
+                pageLength: 10,
+                language: {
+                    search: "Search:",
+                    lengthMenu: "Show _MENU_ entries"
+                }
+            });
+        }
+
+        async function loadWithdrawals() {
+            // Wait for InsForge SDK
+            await new Promise(r => setTimeout(r, 500));
+
+            if (!window.insforgeClient) {
+                console.warn("InsForge Client not found.");
+                return;
+            }
+
+            // Fetch balances and update coin dropdown
+            try {
+                const { data, error: authErr } = await window.insforgeClient.auth.getCurrentUser();
+                const user = data?.user || data;
+                if (authErr || !user) {
+                    window.location.href = 'index.html';
+                    return;
+                }
+
+                const { data: balances } = await window.insforgeClient.database.from('balances').select('*').eq('user_id', user.id);
+                if (balances && balances.length > 0) {
+                    balances.forEach(b => {
+                        const abbr = (b.asset || '').toUpperCase();
+                        const opt = $(`#withdrawal-coin option[data-coin-abbr="${abbr}"]`);
+                        if (opt.length) {
+                            opt.attr('data-amountbalance', parseFloat(b.amount) || 0);
+                        }
+                    });
+                }
+            } catch(e) {
+                console.warn('Balance fetch error:', e.message);
+            }
+
+            // Fetch withdrawals history
+            try {
+                const { data: authData } = await window.insforgeClient.auth.getCurrentUser();
+                const user = authData?.user || authData;
+                
+                if (!user) return;
+
+                const { data: withdrawalsList, error: wErr } = await window.insforgeClient.database.from('withdrawals').select('*').eq('user_id', user.id).order('created_at', { ascending: false });
+                
+                if ($.fn.DataTable.isDataTable('#withdrawals-history-table')) {
+                    $('#withdrawals-history-table').DataTable().destroy();
+                }
+                const tbody = $('#withdrawals-history-table tbody');
+                tbody.empty();
+
+                let prices = {};
+                try {
+                    const ids = "bitcoin,ethereum,tether,litecoin,dogecoin";
+                    const res = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${ids}&vs_currencies=usd`);
+                    prices = await res.json();
+                } catch(e) { console.warn("Price fetch err:", e); }
+
+                if (!wErr && withdrawalsList && withdrawalsList.length > 0) {
+                    withdrawalsList.forEach(w => {
+                        const d = new Date(w.created_at);
+                        const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                        const day = d.getDate();
+                        const month = monthNames[d.getMonth()];
+                        const year = d.getFullYear();
+                        const dateStr = `<div class="date-cell">${day}<br>${month},<br>${year}</div>`;
+                        
+                        const status = w.status || 'Pending';
+                        
+                        const coinNamesMap = {
+                            'BTC': 'Bitcoin', 'ETH': 'Ethereum', 'USDT': 'Tether', 'LTC': 'Litecoin', 'DOGE': 'Dogecoin'
+                        };
+                        const geckoMap = { 'BTC': 'bitcoin', 'ETH': 'ethereum', 'USDT': 'tether', 'LTC': 'litecoin', 'DOGE': 'dogecoin' };
+                        const asset = w.asset || w.coin_abbr || 'USDT';
+                        const fullName = coinNamesMap[asset.toUpperCase()] || asset;
+                        const geckoId = geckoMap[asset.toUpperCase()] || 'tether';
+                        const price = prices[geckoId]?.usd || 0;
+                        const usdAmount = price > 0 ? `<br><small class="text-muted italic">$${(w.amount * price).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</small>` : '';
+
+                        tbody.append(`
+                            <tr>
+                                <td style="line-height: 1.2; font-weight: 500;">${dateStr}</td>
+                                <td><strong><i class="cc ${asset.toUpperCase()} text-success" title="${asset}"></i> ${fullName}</strong></td>
+                                <td><strong>${w.method || 'Wallet'}</strong></td>
+                                <td style="font-weight: 700;">${w.amount} ${asset.toUpperCase()}${usdAmount}</td>
+                                <td style="max-width: 250px; word-wrap: break-word;">${w.destination_address || w.address || w.accountNumber || ''}</td>
+                                <td><span class="${getBadgeClass(status)} shadow-sm">${status}</span></td>
+                            </tr>
+                        `);
+                    });
+                } else {
+                    tbody.append('<tr><td colspan="6" class="text-center text-muted py-4">No withdrawals found</td></tr>');
+                }
+                const hasData = withdrawalsList && withdrawalsList.length > 0;
+                initDataTable(hasData);
+            } catch(e) {
+                console.warn('Withdrawal fetch error:', e.message);
+            }
+        }
+
+        $(document).ready(function() {
+            // Load and initialize data directly
+            loadWithdrawals();
+
+            $('#open-withdrawal-modal').on('click', function() {
+                $('#withdrawal-modal').modal({
+                    backdrop: 'static',
+                    show: true,
+                    focus: false
+                })
+            })
+
+            const clearFields = () => {
+                $('#withdrawal-coin').val('')
+                $('#withdrawal-amount').val('').attr('disabled', true)
+                $('#withdrawal-address').val('')
+                $('#withdrawal-modal-label-amount-balance').text('')
+                $('#withdrawal-modal-label-amount-in-usd').text('')
+                $('#withdrawal-amount-status-text').text('')
+            }
+
+            $(document).on('hide.bs.modal','#withdrawal-modal', function () {
+                clearFields()
+                $('#btn-submit-withdrawal').attr('disabled', false).html("Submit")
+            })
+
+            $('#withdrawal-coin').on('change', function() {
+                const selectedOption = $(this).find(":selected")
+
+                if (selectedOption.val() == '') {
+                    $('#withdrawal-modal-label-amount-balance').text('')
+                    $('#withdrawal-amount').attr('data-coin-abbr', '').attr('data-coin-gecko', '').attr('disabled', true).attr('data-amountbalance', '')
+                    return
+                }
+
+                const coinBalance = selectedOption.attr('data-amountbalance')
+                const coinAbbr = selectedOption.attr('data-coin-abbr')
+                const coinGecko = selectedOption.attr('data-coin-gecko')
+                $('#withdrawal-modal-label-amount-balance').text(`Balance: ${coinBalance ?? '0'} ${coinAbbr ?? ''}`)
+                $('#withdrawal-amount').attr('data-coin-abbr', coinAbbr).attr('data-coin-gecko', coinGecko).attr('disabled', false).attr('data-amountbalance', coinBalance)
+            })
+
+        const currentPrices = {};
+        $('#withdrawal-amount').on('input', async function() {
+            const amount = $(this).val()
+            const coinGeckoId = $(this).attr('data-coin-gecko')
+            const coinBalance = $(this).attr('data-amountbalance')
+
+            if (amount == ''){
+                $('#withdrawal-modal-label-amount-in-usd').text('')
+                $('#withdrawal-amount-status-text').text('')
+                return
+            }
+
+            const valAmount = parseFloat(amount);
+            if (valAmount > parseFloat(coinBalance)) {
+                $('#withdrawal-amount-status-text').text('Insufficient coin balance')
+            } else {
+                $('#withdrawal-amount-status-text').text('')
+            }
+
+            // Fetch price if not in cache
+            if (!currentPrices[coinGeckoId]) {
+                try {
+                    const res = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${coinGeckoId}&vs_currencies=usd`);
+                    const data = await res.json();
+                    currentPrices[coinGeckoId] = data[coinGeckoId]?.usd || 0;
+                } catch (e) {
+                    console.error("Price fetch error:", e);
+                }
+            }
+
+            const price = currentPrices[coinGeckoId] || 0;
+            const amountInUSD = (valAmount * price).toFixed(2);
+            
+            if (price > 0) {
+                $('#withdrawal-modal-label-amount-in-usd').html(`&thickapprox; $${amountInUSD}`);
+                if (amountInUSD < 10) {
+                    $('#withdrawal-amount-status-text').text('Minimum withdrawal is $10 USD');
+                } else if (valAmount <= parseFloat(coinBalance)) {
+                    $('#withdrawal-amount-status-text').text('');
+                }
+            } else {
+                // If price fetch failed, use a neutral state
+                $('#withdrawal-modal-label-amount-in-usd').html('');
+            }
+        });
+
+            $('#withdrawal-method').on('change', function() {
+                const val = $(this).val()
+                switch ($.trim(val)) {
+                    case "Bank":
+                        $('#withdrawal-address-div').removeClass('d-block').addClass('d-none')
+                        $('#bank-details-div').removeClass('d-none').addClass('d-block')
+                        break;
+                    case "Wallet":
+                        $('#bank-details-div').removeClass('d-block').addClass('d-none')
+                        $('#withdrawal-address-div').removeClass('d-none').addClass('d-block')
+                        break;
+                    default:
+                        $('#withdrawal-address-div').removeClass('d-block').addClass('d-none')
+                        $('#bank-details-div').removeClass('d-block').addClass('d-none')
+                        break;
+                }
+            })
+
+            $('#withdrawal-form').on('submit', async function(e) {
+                e.preventDefault()
+                const btn = $('#btn-submit-withdrawal')
+
+                const userCoinId = $('#withdrawal-coin').val()
+                const amount = $('#withdrawal-amount').val()
+                const address = $('#withdrawal-address').val()
+                const coinBalance = $('#withdrawal-amount').attr('data-amountbalance')
+                const method = $('#withdrawal-method').val()
+                const accountName = $('#account-name').val()
+                const accountNumber = $('#account-number').val()
+                const bankCode = $('#bank-code').val()
+                const bankName = $('#bank-name').val()
+
+                const coinAbbr = $('#withdrawal-amount').attr('data-coin-abbr');
+
+                if (userCoinId == '' || amount == '') {
+                    alert('All fields are required.')
+                    return
+                }
+
+                if (method == "Wallet" && address == '') {
+                    alert('Please enter a wallet address')
+                    return
+                }
+
+                if (method == "Bank" && (accountName == '' || accountNumber == '' || bankName == '')) {
+                    alert('Please enter bank details')
+                    return
+                }
+
+                // Final Minimum Check
+                const coinGeckoId = $('#withdrawal-amount').attr('data-coin-gecko');
+                const price = currentPrices[coinGeckoId] || 0;
+                const finalAmount = parseFloat(amount);
+                const totalUSD = finalAmount * price;
+
+                if (price > 0 && totalUSD < 10) {
+                    alert('The minimum withdrawal amount is $10 USD equivalent. Your current request is roughly $' + totalUSD.toFixed(2));
+                    return;
+                }
+
+                btn.attr('disabled', true).html("Submitting <i class='fa fa-circle-notch fa-spin'></i>")
+
+                try {
+                    if (!window.insforgeClient) throw new Error("InsForge Client not initialized.");
+                    
+                    // Force a session refresh to guarantee the token is active and not silently expired
+                    const { data: refreshData, error: authError } = await window.insforgeClient.auth.refreshSession();
+                    const user = refreshData?.user;
+
+                    if (authError || !user) {
+                        alert("Your authentication session has expired. Please log in again to continue.");
+                        window.location.href = "index.html";
+                        return;
+                    }
+
+                    const destAddress = method === "Bank" ? `Bank: ${accountNumber} (${bankName})` : (address || 'N/A');
+                    const finalAmount = parseFloat(amount);
+                    
+                    // Use the built-in database PostgREST client
+                    const payload = {
+                        user_id: user.id,
+                        amount: finalAmount, 
+                        status: 'Pending',
+                        asset: coinAbbr,
+                        destination_address: destAddress
+                    }
+                    
+                    console.log("Submitting withdrawal for user:", user.id);
+                    console.log("Payload:", payload);
+
+                    const { data: insertData, error: insertError } = await window.insforgeClient.database.from('withdrawals').insert([payload]);
+                    if (insertError) throw insertError;
+
+                    // Send Email Notification
+                    try {
+                        const emailHtml = `
+                            <div style="font-family: sans-serif; max-width: 600px; margin: auto; border: 1px solid #eee; padding: 20px;">
+                                <h2 style="color: #2463f1;">Withdrawal Requested</h2>
+                                <p>Hello <strong>${user.email.split('@')[0]}</strong>,</p>
+                                <p>Your withdrawal request for <strong>${finalAmount} ${coinAbbr}</strong> has been received and is currently <strong>PENDING</strong>.</p>
+                                <div style="background: #f9f9f9; padding: 15px; border-radius: 8px; margin: 20px 0;">
+                                    <p style="margin: 5px 0;"><strong>Asset:</strong> ${coinAbbr}</p>
+                                    <p style="margin: 5px 0;"><strong>Amount:</strong> ${finalAmount}</p>
+                                    <p style="margin: 5px 0;"><strong>Destination:</strong> ${destAddress}</p>
+                                    <p style="margin: 5px 0;"><strong>Status:</strong> Pending</p>
+                                </div>
+                                <p>Our team will process your request shortly. You can track its status in your dashboard.</p>
+                                <p>If you didn't authorize this, please contact us immediately on Instagram <a href="https://instagram.com/TRU_WALLET">@TRU_WALLET</a>.</p>
+                                <hr style="border: 0; border-top: 1px solid #eee;">
+                                <p style="font-size: 12px; color: #888;">&copy; 2026 Tru-Wallet. Secure Crypto Management.</p>
+                            </div>
+                        `;
+                        const { data: emailData, error: emailErr } = await window.insforgeClient.emails.send({
+                            to: user.email,
+                            subject: `Withdrawal Requested: ${finalAmount} ${coinAbbr}`,
+                            html: emailHtml
+                        });
+                        
+                        if (emailErr) {
+                            console.error("Email service error:", emailErr.message);
+                            if (emailErr.details) console.error("Email error details:", emailErr.details);
+                        } else {
+                            console.log("Withdrawal notification email sent successfully to:", user.email);
+                        }
+                    } catch (emailErr) {
+                        console.error("Critical error in email system:", emailErr.message);
+                    }
+
+                    // Deduct balance manually
+                    if (coinBalance !== undefined && coinBalance !== '') {
+                        const newBalance = parseFloat(coinBalance) - finalAmount;
+                        await window.insforgeClient.database.from('balances')
+                            .update({ amount: newBalance })
+                            .eq('asset', coinAbbr)
+                            .eq('user_id', user.id);
+                    }
+
+                    btn.attr('disabled', false).html("Submit");
+                    clearFields();
+                    $('#withdrawal-modal').modal('hide');
+                    
+                    // Show success status directly in the UI with a custom modal
+                    $('#withdrawal-success-modal').modal('show');
+                    
+                    loadWithdrawals(); // Refresh the table immediately
+                } catch (err) {
+                    btn.attr('disabled', false).html("Submit");
+                    alert("Error submitting withdrawal: " + err.message);
+                }
+            })
+        })
+    </script>
+
+
+<script>
+    $(() => {
+        'use strict'
+
+        $('#form-newsletter').submit(function(e){
+            e.preventDefault()
+
+            const btn = $('#btn-newsletter')
+            btn.html('Submitting...').attr('disabled', true)
+
+            window.setTimeout(() => {
+                alert('You have successfully subscribe to our newletter. Lookout for our emails on exciting offers and latest crypto news.')
+
+                btn.html('Submit').attr('disabled', false)
+                $('#form-newsletter')[0].reset()
+            }, 3500);
+        })
+    })
+</script>
+
+
+
+                <script>// Write JavaScript here</script>
+            
+        
+    </body>

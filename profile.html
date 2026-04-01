@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile & Security - Truwallet</title>
+
+    <link rel="stylesheet" href="https://tru-wallet.net/css/ply-app.css">
+    <link rel="stylesheet" href="https://tru-wallet.net/css/magnific-popup.css">
+    <link rel="stylesheet" href="https://tru-wallet.net/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+    <style>
+        .form-control { border-radius: 8px; border: 1px solid #e1e1e1; padding: 10px 15px; margin-bottom: 5px; }
+        .form-label { font-weight: 500; font-size: 14px; color: #555; display: block; margin-top: 15px; }
+        .text-danger { color: #d33535; }
+        li.active>a.sidebar-nav-a { display: block; color: #eee; padding-bottom: 7px; }
+        li.active>a.sidebar-nav-a:hover { color: #fff; }
+        .btn-update { background-color: #3772FF; color: white; padding: 12px 30px; border-radius: 30px; border: none; font-weight: 600; width: 100%; max-width: 300px; }
+        .btn-update:hover { background-color: #2b5cd4; }
+        .link-pass { color: #3772FF; font-weight: 500; text-decoration: none; margin-top: 20px; display: inline-block; }
+        .avt-container { position: relative; cursor: pointer; display: inline-block; width: 100px; height: 100px; border-radius: 50%; overflow: hidden; }
+        .avt-container:hover .avt-overlay { opacity: 1; }
+        .avt-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; color: white; opacity: 0; transition: opacity 0.3s; }
+        .avt-img { width: 100%; height: 100%; object-fit: cover; }
+    </style>
+</head>
+<body class="body header-fixed home-3 is_light">
+
+    <header id="header_main" class="header is-fixed">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header__body d-flex justify-content-between">
+                        <div class="header__left">
+                            <div class="logo">
+                                <a class="light" href="home.html">
+                                    <img src="https://tru-wallet.net/images/logo/truewallet-logo-black.png" alt="" width="118">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="header__right">
+                            <div class="dropdown user d-block">
+                                <button class="btn dropdown-toggle shadow-none p-0" type="button" data-toggle="dropdown">
+                                    <img src="https://tru-wallet.net/images/avt/avt-01.jpg" id="header-avatar" class="rounded-circle header-avatar-img" alt="" style="width: 32px; height: 32px; object-fit: cover;">
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item text-danger" href="index.html" onclick="if(window.insforgeClient) window.insforgeClient.auth.signOut()">Logout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div style="height: 50px;"></div>
+
+    <section class="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6"><h3 class="heading">Profile & Security</h3></div>
+                <div class="col-md-6">
+                    <ul class="breadcrumb">
+                        <li><a href="home.html">Home</a></li>
+                        <li><p class="fs-18">/</p></li>
+                        <li><p class="fs-18">Profile</p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="user-profile wallet buy-crypto flat-tabs">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-md-12">
+                    <div class="user-info center">
+                        <div class="avt-container" onclick="$('#avatar-input').click()">
+                            <img src="https://tru-wallet.net/images/avt/avt.png" id="sidebar-avatar" class="avt-img" alt="">
+                            <div class="avt-overlay"><i class="fa fa-camera"></i></div>
+                        </div>
+                        <input type="file" id="avatar-input" accept="image/*" style="display: none;">
+                        <h6 id="user-display-name-sidebar" class="name text-capitalize">Loading...</h6>
+                        <p id="user-display-email-sidebar">Loading...</p>
+                    </div>
+                    <ul class="menu-tab">
+                        <li onclick="location.href = 'dashboard.html'"><a href="dashboard.html" class="sidebar-nav-a"><i class="fa fa-gauge-high"></i> Dashboard</a></li>
+                        <li onclick="location.href = 'deposit.html'"><a href="deposit.html" class="sidebar-nav-a"><i class="fa fa-money-bill-transfer"></i> Deposit</a></li>
+                        <li onclick="location.href = 'orders.html'"><a href="orders.html" class="sidebar-nav-a"><i class="fa fa-money-bill-transfer"></i> P2P Deposit Orders</a></li>
+                        <li onclick="location.href = 'packages.html'"><a href="packages.html" class="sidebar-nav-a"><i class="fa fa-sack-dollar"></i> Investments</a></li>
+                        <li onclick="location.href = 'withdrawals.html'"><a href="withdrawals.html" class="sidebar-nav-a"><i class="fa fa-money-bill"></i> Withdrawals</a></li>
+                        <li onclick="location.href = 'external-wallets.html'"><a href="external-wallets.html" class="sidebar-nav-a"><i class="fa fa-wallet"></i> External Wallets</a></li>
+                        <li onclick="location.href = 'loans.html'"><a href="loans.html" class="sidebar-nav-a"><i class="fa fa-university"></i> Request Loan</a></li>
+                        <li onclick="location.href = 'referrals.html'"><a href="referrals.html" class="sidebar-nav-a"><i class="fa fa-users-rays"></i> Referrals</a></li>
+                        <li class="active" onclick="location.href = 'profile.html'"><a href="profile.html" class="sidebar-nav-a"><i class="fa fa-user"></i> Profile & Security</a></li>
+                        <li onclick="location.href = 'index.html'"><a href="index.html" class="sidebar-nav-a"><i class="fa fa-lock"></i> Logout</a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-9 col-md-12">
+                    <div class="content-tab">
+                        <div class="content-inner">
+                            <h4 class="heading text-black mb-4">Profile Information</h4>
+                            
+                            <form id="profile-form">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">First Name <span class="text-danger">*</span></label>
+                                        <input type="text" id="first_name" class="form-control" value="" required placeholder="First Name">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Last Name <span class="text-danger">*</span></label>
+                                        <input type="text" id="last_name" class="form-control" value="" required placeholder="Last Name">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Email Address <span class="text-danger">*</span></label>
+                                        <input type="email" id="email" class="form-control" value="" disabled>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Phone Number</label>
+                                        <input type="text" id="phone" class="form-control" placeholder="Phone Number">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Address</label>
+                                        <input type="text" id="address" class="form-control" placeholder="Street Address">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Birth Day</label>
+                                        <input type="date" id="birthday" class="form-control">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label class="form-label">Country</label>
+                                        <input type="text" id="country" class="form-control" placeholder="India">
+                                    </div>
+                                </div>
+                                <div class="mt-4 d-flex justify-content-between align-items-center">
+                                    <button type="submit" class="btn-update">Update Profile</button>
+                                    <a href="#" onclick="alert('Password reset link sent to email.')" class="link-pass">Change Password</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://tru-wallet.net/js/jquery.min.js"></script>
+    <script src="https://tru-wallet.net/js/bootstrap.min.js"></script>
+    <script src="insforge-config.js"></script>
+    <script type="module">
+        import { createClient } from "https://cdn.jsdelivr.net/npm/@insforge/sdk@latest/+esm";
+        window.insforgeClient = createClient({ baseUrl: window.INSFORGE_URL, anonKey: window.INSFORGE_ANON_KEY });
+    </script>
+    <script src="user-profile.js"></script>
+
+    <script>
+        async function loadProfile() {
+            let retries = 0;
+            while (!window.insforgeClient && retries < 40) { await new Promise(r => setTimeout(r, 50)); retries++; }
+            if (!window.insforgeClient) return;
+
+            try {
+                const { data, error } = await window.insforgeClient.auth.getCurrentUser();
+                const user = data?.user || data;
+                if (error || !user) { window.location.href = 'index.html'; return; }
+
+                // Sidebar display
+                const userIdShort = user.id.split('-')[0].toUpperCase();
+                const email = user.email || "";
+                $('#email').val(email);
+                $('#user-display-email-sidebar').text(email);
+
+                // Fetch from profiles table
+                const { data: profile, error: profError } = await window.insforgeClient.database
+                    .from('profiles')
+                    .select('*')
+                    .eq('id', user.id)
+                    .single();
+
+                if (profile) {
+                    $('#first_name').val(profile.first_name || "");
+                    $('#last_name').val(profile.last_name || "");
+                    $('#phone').val(profile.phone || "");
+                    $('#address').val(profile.address || "");
+                    $('#birthday').val(profile.birthday || "");
+                    $('#country').val(profile.country || "");
+                }
+
+            } catch (e) { console.error("Load error:", e); }
+        }
+
+        async function updateProfile(e) {
+            e.preventDefault();
+            const { data: user } = await window.insforgeClient.auth.getCurrentUser();
+            const userData = user?.user || user;
+            if (!userData) return;
+
+            const payload = {
+                id: userData.id,
+                first_name: $('#first_name').val(),
+                last_name: $('#last_name').val(),
+                phone: $('#phone').val(),
+                address: $('#address').val(),
+                birthday: $('#birthday').val(),
+                country: $('#country').val(),
+                updated_at: new Date().toISOString()
+            };
+
+            const btn = $('.btn-update');
+            btn.text('Updating...').prop('disabled', true);
+
+            try {
+                // Use upsert to create or update profile
+                const { error } = await window.insforgeClient.database
+                    .from('profiles')
+                    .upsert(payload);
+
+                if (error) throw error;
+                alert('Profile updated successfully!');
+                window.loadUserProfile(); 
+                loadProfile();
+            } catch (e) {
+                console.error("Update error:", e);
+                const errMsg = e.message || e.error || (typeof e === 'string' ? e : JSON.stringify(e));
+                alert('Failed to update profile: ' + errMsg);
+            } finally {
+                btn.text('Update Profile').prop('disabled', false);
+            }
+        }
+
+        async function handleAvatarUpload(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const { data: userData } = await window.insforgeClient.auth.getCurrentUser();
+            const user = userData?.user || userData;
+            if (!user) return;
+
+            const originalBtn = $('.avt-overlay');
+            originalBtn.html('<i class="fa fa-circle-notch fa-spin"></i>');
+
+            try {
+                // 1. Upload to InsForge Storage (bucket: avatars)
+                const fileExt = file.name.split('.').pop();
+                const fileName = `${user.id}-${Date.now()}.${fileExt}`;
+                const filePath = `user-avatars/${fileName}`;
+
+                const { data: uploadData, error: uploadError } = await window.insforgeClient.storage
+                    .from('avatars')
+                    .upload(filePath, file);
+
+                if (uploadError) throw uploadError;
+
+                // 2. Get Public URL
+                const { data: urlData } = window.insforgeClient.storage
+                    .from('avatars')
+                    .getPublicUrl(filePath);
+                
+                const avatarUrl = urlData.publicUrl;
+
+                // 3. Update profiles table
+                const { error: updateError } = await window.insforgeClient.database
+                    .from('profiles')
+                    .update({ avatar_url: avatarUrl, updated_at: new Date().toISOString() })
+                    .eq('id', userData.id);
+
+                if (updateError) throw updateError;
+
+                // 4. Update UI
+                window.loadUserProfile();
+                alert('Profile picture updated successfully!');
+
+            } catch (err) {
+                console.error("Upload error:", err);
+                alert('Upload failed: ' + (err.message || 'Check if "avatars" bucket is created and public.'));
+            } finally {
+                originalBtn.html('<i class="fa fa-camera"></i>');
+                $('#avatar-input').val(''); // Clear input
+            }
+        }
+
+        $(document).ready(() => {
+            loadProfile();
+            $('#profile-form').on('submit', updateProfile);
+            $('#avatar-input').on('change', handleAvatarUpload);
+        });
+    </script>
+</body>
+</html>

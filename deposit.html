@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="nSoZIUdmG9H6JGT2YC7wEKqjhaKZRw3GzC62balM">
+    <title>Deposits - Truwallet</title>
+
+    <link rel="stylesheet" href="https://tru-wallet.net/css/ply-app.css">
+    <link rel="stylesheet" href="https://tru-wallet.net/css/magnific-popup.css">
+    <link rel="stylesheet" href="https://tru-wallet.net/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cryptocoins-icons@2.9.0/webfont/cryptocoins.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cryptocoins-icons@2.9.0/webfont/cryptocoins-colors.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+    <style>
+        table.dataTable.no-footer { border-bottom: 0px !important; }
+        table.dataTable thead th, table.dataTable thead td { padding: 10px 12px; border-bottom: 1px solid rgba(0,0,0,0.1); font-weight: 600; color: #555; }
+        table.dataTable tbody tr:hover { background-color: rgba(0,0,0,0.03); }
+        .badge-pending { background-color: #f5a623; color: #fff; font-size: 12px; font-weight: 500; padding: 5px 12px; border-radius: 50px; }
+        .badge-rejected { background-color: #e74c3c; color: #fff; font-size: 12px; font-weight: 500; padding: 5px 12px; border-radius: 50px; }
+        .badge-complete { background-color: #2ecc71; color: #fff; font-size: 12px; font-weight: 500; padding: 5px 12px; border-radius: 50px; }
+        li.active>a.sidebar-nav-a { display: block; color: #eee; padding-bottom: 7px; }
+        li.active>a.sidebar-nav-a:hover { color: #fff; }
+    </style>
+    <link rel="shortcut icon" href="https://tru-wallet.net/images/logo/truwallet-logo.png">
+</head>
+<body class="body header-fixed home-3 is_light">
+
+    <header id="header_main" class="header is-fixed">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header__body d-flex justify-content-between">
+                        <div class="header__left">
+                            <div class="logo">
+                                <a class="light" href="home.html">
+                                    <img src="https://tru-wallet.net/images/logo/truewallet-logo-black.png" alt="" width="118">
+                                </a>
+                            </div>
+                            <div class="left__main">
+                                <nav class="main-nav">
+                                    <ul class="menu">
+                                        <li><a href="home.html">Home</a></li>
+                                        <li><a href="about.html">About</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="p2p.html">P2P</a></li>
+                                        <li><a href="invesment.html">Investment</a></li>
+                                        <li><a href="dashboard.html">Dashboard</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="header__right">
+                            <div class="dropdown user d-block">
+                                <button class="btn dropdown-toggle shadow-none" type="button" data-toggle="dropdown">
+                                    <img id="header-avatar" src="https://tru-wallet.net/images/avt/avt-01.jpg" class="rounded-circle" alt="">
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="profile.html">Profile</a>
+                                    <a class="dropdown-item text-danger" href="index.html" onclick="if(window.insforgeClient) window.insforgeClient.auth.signOut()">
+                                        Logout
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div style="height: 50px;"></div>
+
+    <section class="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6"><h3 class="heading">Deposits</h3></div>
+                <div class="col-md-6">
+                    <ul class="breadcrumb">
+                        <li><a href="home.html">Home</a></li>
+                        <li><p class="fs-18">/</p></li>
+                        <li><p class="fs-18">Deposits</p></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="user-profile wallet buy-crypto flat-tabs">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-3 col-md-12">
+                    <div class="user-info center">
+                        <div class="avt"><img id="sidebar-avatar" src="https://tru-wallet.net/images/avt/avt.png" alt=""></div>
+                        <h6 id="sidebar-name" class="name text-capitalize">Loading...</h6>
+                        <p id="sidebar-email">Loading...</p>
+                    </div>
+                    <ul class="menu-tab">
+                        <li onclick="location.href = 'dashboard.html'"><a href="dashboard.html" class="sidebar-nav-a"><i class="fa fa-gauge-high"></i> Dashboard</a></li>
+                        <li class="" onclick="location.href = 'deposit.html'">
+                            <a href="deposit.html" class="sidebar-nav-a"><i class="fa fa-money-bill-transfer"></i> Deposit</a>
+                        </li>
+                        <li onclick="location.href = 'orders.html'"><a href="orders.html" class="sidebar-nav-a"><i class="fa fa-money-bill-transfer"></i> P2P Deposit Orders</a></li>
+                        <li onclick="location.href = 'packages.html'"><a href="packages.html" class="sidebar-nav-a"><i class="fa fa-sack-dollar"></i> Investments</a></li>
+                        <li onclick="location.href = 'withdrawals.html'"><a href="withdrawals.html" class="sidebar-nav-a"><i class="fa fa-money-bill"></i> Withdrawals</a></li>
+                        <li onclick="location.href = 'external-wallets.html'"><a href="external-wallets.html" class="sidebar-nav-a"><i class="fa fa-wallet"></i> External Wallets</a></li>
+                        <li onclick="location.href = 'loans.html'"><a href="loans.html" class="sidebar-nav-a"><i class="fa fa-university"></i> Request Loan</a></li>
+                        <li onclick="location.href = 'referrals.html'"><a href="referrals.html" class="sidebar-nav-a"><i class="fa fa-users-rays"></i> Referrals</a></li>
+                        <li onclick="location.href = 'profile.html'"><a href="profile.html" class="sidebar-nav-a"><i class="fa fa-user"></i> Profile & Security</a></li>
+                        <li onclick="location.href = 'index.html'"><a href="index.html" class="sidebar-nav-a"><i class="fa fa-lock"></i> Logout</a></li>
+                    </ul>
+                </div>
+                <div class="col-xl-9 col-md-12">
+                    <div class="content-tab">
+                        <div class="content-inner">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <a href="javascript:void(0)" onclick="$('#deposit-coming-soon-modal').modal('show')" class="w-100">
+                                        <div class="wallet-main shadow-sm p-3 bg-body rounded">
+                                            <div class="icons"><h4 class="text-center"><i class="cc BTC" title="BTC"></i></h4></div>
+                                            <h6 class="heading">Bitcoin</h6>
+                                            <div class="wallet-body">
+                                                <div class="left">
+                                                    <p>Bitcoin Balance</p>
+                                                    <div class="price"><h6 id="balance-btc">0</h6><div class="sale success">BTC</div></div>
+                                                    <p id="usd-btc">$0</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <a href="javascript:void(0)" onclick="$('#deposit-coming-soon-modal').modal('show')" class="w-100">
+                                        <div class="wallet-main shadow-sm p-3 bg-body rounded">
+                                            <div class="icons"><h4 class="text-center"><i class="cc ETH" title="ETH"></i></h4></div>
+                                            <h6 class="heading">Ethereum</h6>
+                                            <div class="wallet-body">
+                                                <div class="left">
+                                                    <p>Ethereum Balance</p>
+                                                    <div class="price"><h6 id="balance-eth">0</h6><div class="sale success">ETH</div></div>
+                                                    <p id="usd-eth">$0</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <a href="javascript:void(0)" onclick="$('#deposit-coming-soon-modal').modal('show')" class="w-100">
+                                        <div class="wallet-main shadow-sm p-3 bg-body rounded">
+                                            <div class="icons"><h4 class="text-center"><i class="cc USDT" title="USDT"></i></h4></div>
+                                            <h6 class="heading">Tether</h6>
+                                            <div class="wallet-body">
+                                                <div class="left">
+                                                    <p>Tether Balance</p>
+                                                    <div class="price"><h6 id="balance-usdt">0</h6><div class="sale success">USDT</div></div>
+                                                    <p id="usd-usdt">$0</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <a href="javascript:void(0)" onclick="$('#deposit-coming-soon-modal').modal('show')" class="w-100">
+                                        <div class="wallet-main shadow-sm p-3 bg-body rounded">
+                                            <div class="icons"><h4 class="text-center"><i class="cc LTC" title="LTC"></i></h4></div>
+                                            <h6 class="heading">Litecoin</h6>
+                                            <div class="wallet-body">
+                                                <div class="left">
+                                                    <p>Litecoin Balance</p>
+                                                    <div class="price"><h6 id="balance-ltc">0</h6><div class="sale success">LTC</div></div>
+                                                    <p id="usd-ltc">$0</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <a href="javascript:void(0)" onclick="$('#deposit-coming-soon-modal').modal('show')" class="w-100">
+                                        <div class="wallet-main shadow-sm p-3 bg-body rounded">
+                                            <div class="icons"><h4 class="text-center"><i class="cc DOGE" title="DOGE"></i></h4></div>
+                                            <h6 class="heading">Dogecoin</h6>
+                                            <div class="wallet-body">
+                                                <div class="left">
+                                                    <p>Dogecoin Balance</p>
+                                                    <div class="price"><h6 id="balance-doge">0</h6><div class="sale success">DOGE</div></div>
+                                                    <p id="usd-doge">$0</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <section class="coin-list p-0 mt-4">
+                                <div class="shadow-sm p-3 mb-5 bg-body rounded">
+                                    <div class="block-text">
+                                        <h6 class="heading text-black">Deposit History</h6>
+                                        <button onclick="$('#deposit-coming-soon-modal').modal('show')" class="btn btn-sm btn-primary text-white">New Deposit</button>
+                                    </div>
+                                    <div class="table-responsive-sm mt-3">
+                                        <table class="table table-borderless" id="deposits-table">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Date</th>
+                                                    <th scope="col">Asset</th>
+                                                    <th scope="col">Amount</th>
+                                                    <th scope="col">Source Address</th>
+                                                    <th scope="col">Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <!-- Dynamic rows -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="deposit-coming-soon-modal" tabindex="-1" role="dialog" aria-labelledby="deposit-coming-soon-modal-label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content text-center py-4">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="close btn" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="text-danger" style="font-size: 26px;">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-4">
+                        <i class="fa fa-clock text-primary" style="font-size: 60px;"></i>
+                    </div>
+                    <h4 class="mb-3 text-black">Coming Soon!</h4>
+                    <p class="text-muted mb-4">The online deposit system is currently undergoing maintenance and will be available shortly.</p>
+                    
+                    <div class="p-3 bg-light rounded text-start mb-4">
+                        <p class="mb-2 small text-uppercase fw-bold text-muted">Direct Support</p>
+                        <p class="mb-0">For manual deposits, please contact us on Instagram:</p>
+                        <a href="https://instagram.com/TRU_WALLET" target="_blank" class="fw-bold text-primary">@TRU_WALLET</a>
+                    </div>
+                    
+                    <button type="button" class="btn btn-primary w-100" data-dismiss="modal">I Understand</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer style-2">
+        <div class="container">
+            <div class="footer__bottom"><p>Copyright © 2026 Truwallet. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <script src="https://tru-wallet.net/js/jquery.min.js"></script>
+    <script src="https://tru-wallet.net/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script src="insforge-config.js"></script>
+    <script type="module">
+        import { createClient } from "https://cdn.jsdelivr.net/npm/@insforge/sdk@latest/+esm";
+        window.insforgeClient = createClient({ baseUrl: window.INSFORGE_URL, anonKey: window.INSFORGE_ANON_KEY });
+    </script>
+    <script src="user-profile.js"></script>
+    <script>
+        const getBadgeClass = (status) => {
+            const s = (status || '').toLowerCase();
+            if (s === 'pending') return 'badge-pending';
+            if (s === 'rejected' || s === 'failed') return 'badge-rejected';
+            return 'badge-complete';
+        };
+
+        const coinsData = [
+            { id: "btc", name: "Bitcoin", abbr: "BTC", coingecko: "bitcoin", rate: 65000 },
+            { id: "eth", name: "Ethereum", abbr: "ETH", coingecko: "ethereum", rate: 3500 },
+            { id: "usdt", name: "Tether", abbr: "USDT", coingecko: "tether", rate: 1 },
+            { id: "ltc", name: "Litecoin", abbr: "LTC", coingecko: "litecoin", rate: 85 },
+            { id: "doge", name: "Dogecoin", abbr: "DOGE", coingecko: "dogecoin", rate: 0.16 }
+        ];
+
+        async function loadData() {
+            let retries = 0;
+            while (!window.insforgeClient && retries < 40) { await new Promise(r => setTimeout(r, 50)); retries++; }
+            if (!window.insforgeClient) return;
+
+            try {
+                const { data, error: authErr } = await window.insforgeClient.auth.getCurrentUser();
+                const user = data?.user || data;
+                if (authErr || !user) { window.location.href = 'index.html'; return; }
+
+                // 1. Load Balances and Prices
+                const { data: balances } = await window.insforgeClient.database.from('balances').select('*').eq('user_id', user.id);
+                
+                const ids = coinsData.map(c => c.coingecko).join(',');
+                let prices = {};
+                try {
+                    const res = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${ids}&vs_currencies=usd`);
+                    prices = await res.json();
+                } catch(e) { console.warn("Price fetch failed"); }
+
+                coinsData.forEach(coin => {
+                    const b = balances?.find(x => x.asset.toLowerCase() === coin.abbr.toLowerCase());
+                    const amount = b ? b.amount : 0;
+                    $(`#balance-${coin.id}`).text(amount);
+                    
+                    const rate = (prices[coin.coingecko] && prices[coin.coingecko].usd) ? prices[coin.coingecko].usd : coin.rate;
+                    const val = parseFloat(amount) * rate;
+                    $(`#usd-${coin.id}`).text('$' + val.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2}));
+                });
+
+                // 2. Load Deposits
+                const { data: deposits } = await window.insforgeClient.database.from('deposits').select('*').eq('user_id', user.id).order('created_at', { ascending: false });
+                if (deposits) {
+                    const tbody = $('#deposits-table tbody');
+                    tbody.empty();
+                    deposits.forEach(d => {
+                        const isCredit = d.source_address === 'Admin Credit';
+                        tbody.append(`
+                            <tr>
+                                <td>${new Date(d.created_at).toLocaleDateString()}</td>
+                                <td><strong>${d.asset}</strong></td>
+                                <td><strong>${d.amount} ${d.asset.toUpperCase()}</strong></td>
+                                <td><small>${isCredit ? 'Admin Support' : (d.source_address || d.utr || 'N/A')}</small></td>
+                                <td><span class="${getBadgeClass(d.status)}">${d.status}</span></td>
+                            </tr>
+                        `);
+                    });
+                    if ($.fn.DataTable.isDataTable('#deposits-table')) $('#deposits-table').DataTable().destroy();
+                    $('#deposits-table').DataTable({ order: [], pageLength: 5, searching: false, lengthChange: false });
+                }
+            } catch (e) { console.warn(e); }
+        }
+
+        $(document).ready(() => loadData());
+    </script>
+</body>
+</html>

