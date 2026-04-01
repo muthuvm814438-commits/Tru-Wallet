@@ -300,7 +300,7 @@
                 // Registration Success
                 alert('Registration successful! Please check your email for the verification code.');
                 sessionStorage.setItem('verify_email', email);
-                window.location.href = 'verify-email';
+                window.location.href = 'verify-email.html';
             } catch (err) {
                 alert('Registration failed: ' + err.message);
                 btn.attr('disabled', false).html('Register');
